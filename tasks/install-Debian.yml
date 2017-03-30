@@ -1,0 +1,17 @@
+---
+- name: Install prerequisite packages
+  apt: name="apt-transport-https" state="present"
+
+- name: Debian - Add Elasticsearch repository key
+  apt_key: url="{{ kibana_gpgkey_url }}" state=present
+
+- name: Debian - Add elasticsearch repository
+  apt_repository:
+    repo: "{{ kibana_apt_url }}"
+    state: "present"
+    filename: "elastic-{{ kibana_major_version }}"
+
+- name: Debian - Ensure elasticsearch is installed
+  apt:
+    name: "kibana{% if kibana_version is defined and kibana_version != \"\" %}={{ kibana_version }}{% endif %}"
+    state: "present"

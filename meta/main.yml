@@ -1,0 +1,27 @@
+galaxy_info:
+  author: Matthieu Rémy
+  description: Install and configure kibana
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.2.0
+
+  platforms:
+  - name: EL
+    versions:
+    - 6
+    - 7
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+
+  galaxy_tags:
+    - elastic
+    - search
+    - elk
+    - monitoring
+    - dashboard
+
+
+dependencies: []

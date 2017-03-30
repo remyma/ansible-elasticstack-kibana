@@ -1,0 +1,24 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+docker:
+  containers:
+#    - name: ansible-elasticstack-kibana
+#      image: debian
+#      image_version: latest
+#      privileged: True
+#      command: '/sbin/init'
+#      cap_add: ['SYS_ADMIN', 'SETPCAP']
+#      ansible_groups:
+#        - debian
+    - name: ansible-elasticstack-kibana-centos
+      image: centos
+      image_version: latest
+      privileged: True
+      command: '/sbin/init'
+      ansible_groups:
+        - centos
+verifier:
+  name: testinfra
