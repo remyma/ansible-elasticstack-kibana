@@ -8,8 +8,12 @@
 - name: os-specific tasks
   include: "install-{{ansible_os_family}}.yml"
 
+- name: Configure kibana
+  template: src=kibana.yml dest=/etc/kibana/kibana.yml
+  notify: "restart kibana"
+
 # Restart service and ensure it is enabled
-- name: restart elasticsearch
+- name: restart kibana
   systemd:
     name: kibana
     state: started

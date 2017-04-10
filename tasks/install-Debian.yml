@@ -11,7 +11,7 @@
     state: "present"
     filename: "elastic-{{ kibana_major_version }}"
 
-- name: Debian - Ensure elasticsearch is installed
+- name: Debian - Install Kibana
   apt:
     name: "kibana{% if kibana_version is defined and kibana_version != \"\" %}={{ kibana_version }}{% endif %}"
     state: "present"
