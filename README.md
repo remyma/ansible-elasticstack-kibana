@@ -1,38 +1,34 @@
-Ansible Elasticstack Kibana
-===========================
+# Ansible Elasticstack Kibana
 
-A brief description of the role goes here.
+Install and configure kibana.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+* *java* : logstash needs java to run. This role can handle java install for you. But you can also install it on your own.
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+| Variable     | Default       | Description    |
+| ------------ | ------------- | -------------- |
+| kibana_java_install | true | true to install java / false if java is already installed on you own |
+| kibana_update_java | false | if true, will update java |
+| kibana_major_version | 5.x | Major version of kibana to install |
+| kibana_version | 5.2.2 | Version of kibana to install |
+| kibana_port | 5601 | kibana http port |
+| kibana_host | localhost | Specifies the address to which the Kibana server will bind. |
+| kibana_base_path | | Enables you to specify a path to mount Kibana at if you are running behind a proxy. |
+| kibana_elasticsearch_url | http://localhost:9200 | The URL of the Elasticsearch instance to use for all your queries |
+| kibana_logging_dest | stdout | The URL of the Elasticsearch instance to use for all your queries |
 
-Dependencies
-------------
+## Example Playbook
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+### Basic install
 
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
+    - hosts: kibana-servers
       roles:
-         - { role: username.rolename, x: 42 }
+        - { role: ansible-elasticstack-kibana }
 
-License
--------
+## License
 
 BSD
 
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
