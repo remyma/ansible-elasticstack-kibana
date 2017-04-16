@@ -1,4 +1,5 @@
 # Ansible Elasticstack Kibana
+[![Build Status](https://travis-ci.org/remyma/ansible-elasticstack-kibana.svg?branch=master)](https://travis-ci.org/remyma/ansible-elasticstack-kibana)
 
 Install and configure kibana.
 
