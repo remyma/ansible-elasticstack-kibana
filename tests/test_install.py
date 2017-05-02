@@ -1,7 +1,5 @@
 import testinfra.utils.ansible_runner
 
-from testinfra import modules
-
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     '.molecule/ansible_inventory').get_hosts('all')
 
