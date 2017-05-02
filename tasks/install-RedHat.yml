@@ -1,10 +1,4 @@
 ---
-- name: RedHat - Add Elasticsearch repository key
-  rpm_key:
-    key: "{{ kibana_gpgkey_url }}"
-    state: "present"
-  when: kibana_use_repository and kibana_gpgkey_url
-
 - name: RedHat - Add kibana repository
   template: src=kibana.repo dest=/etc/yum.repos.d/kibana-{{ kibana_major_version }}.repo
   when: kibana_use_repository and kibana_gpgkey_url
