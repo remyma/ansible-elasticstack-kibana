@@ -5,7 +5,7 @@
 
 - name: Debian - Add Elasticsearch repository key
   apt_key: url="{{ kibana_gpgkey_url }}" state=present
-  when: kibana_use_repository and kibana_apt_key
+  when: kibana_use_repository and kibana_gpgkey_url
 
 - name: Debian - Add elasticsearch repository
   apt_repository:
