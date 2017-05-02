@@ -7,7 +7,7 @@
 
 - name: RedHat - Add kibana repository
   template: src=kibana.repo dest=/etc/yum.repos.d/kibana-{{ kibana_major_version }}.repo
-  when: kibana_use_repository
+  when: kibana_use_repository and kibana_gpgkey_url
 
 - name: RedHat - Install Kibana
   yum: name=kibana{% if kibana_version is defined and kibana_version != ""  %}-{{ kibana_version }}{% endif %} state=present update_cache=yes

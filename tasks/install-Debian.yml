@@ -12,7 +12,7 @@
     repo: "{{ kibana_apt_url }}"
     state: "present"
     filename: "elastic-{{ kibana_major_version }}"
-  when: kibana_use_repository
+  when: kibana_use_repository and kibana_apt_url
 
 - name: Debian - Install Kibana
   apt:
