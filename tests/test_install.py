@@ -2,9 +2,6 @@ import testinfra.utils.ansible_runner
 
 from testinfra import modules
 
-Service = modules.Service.as_fixture()
-Command = modules.Command.as_fixture()
-
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     '.molecule/ansible_inventory').get_hosts('all')
 
