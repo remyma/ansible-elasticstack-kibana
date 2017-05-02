@@ -13,6 +13,7 @@ Install and configure kibana.
 | ------------ | ------------- | -------------- |
 | kibana_java_install | true | true to install java / false if java is already installed on you own |
 | kibana_update_java | false | if true, will update java |
+| kibana_use_repository | true | if true, install kibana from repository |
 | kibana_major_version | 5.x | Major version of kibana to install |
 | kibana_version | 5.2.2 | Version of kibana to install |
 | kibana_port | 5601 | kibana http port |
