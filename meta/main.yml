@@ -25,5 +25,5 @@ galaxy_info:
 
 
 dependencies:
-  - src: https://github.com/remyma/ansible-elasticstack.git
+  - src: git+https://github.com/remyma/ansible-elasticstack.git
     name: ansible-elasticstack
