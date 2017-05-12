@@ -24,4 +24,5 @@ galaxy_info:
     - dashboard
 
 
-dependencies: []
+dependencies:
+  - { role: ansible-elasticstack }
