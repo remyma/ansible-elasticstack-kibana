@@ -1,15 +1,4 @@
 ---
-kibana_java_install: true
-kibana_update_java: false
-
-kibana_major_version: "5.x"
-kibana_version: "5.2.2"
-
-kibana_use_repository: true
-kibana_gpgkey_url: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
-kibana_apt_url: "deb https://artifacts.elastic.co/packages/{{ kibana_major_version }}/apt stable main"
-
-# Configuration properties
 kibana_port: 5601
 kibana_host: "localhost"
 kibana_base_path: ""
