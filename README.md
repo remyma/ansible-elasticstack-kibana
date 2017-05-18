@@ -19,7 +19,7 @@ Install and configure kibana.
 
 ## Dependencies
 
-* ansible-elasticstack
+* ansible-elasticstack-root
 
 ## Example Playbook
 

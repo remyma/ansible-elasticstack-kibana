@@ -8,10 +8,3 @@ def test_kibana_running(Service):
     kibana = Service("kibana")
     assert kibana.is_enabled
     assert kibana.is_running
-
-
-def test_java_installed(Command):
-    java_version_cmd = Command(
-        "java -version 2>&1 | grep version | awk '{print $3}' | sed 's/\"//g'"
-    )
-    assert java_version_cmd.stdout >= '1.8'
