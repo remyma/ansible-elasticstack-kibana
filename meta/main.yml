@@ -25,4 +25,4 @@ galaxy_info:
 
 
 dependencies:
-  - role: ansible-elasticstack-root
+  - role: remyma.elasticstack-root
